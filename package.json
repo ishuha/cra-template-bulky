@@ -1,26 +1,45 @@
 {
   "name": "cra-template-bulky",
-  "version": "1.2.0",
+  "version": "1.2.4",
   "keywords": [
     "react",
     "create-react-app",
-    "template"
+    "template",
+    "bulky template",
+    "prefect folder structure",
+    "folder structure",
+    "cra-template-bulky",
+    "cra-template",
+    "react-template"
   ],
   "description": "The template for bulky project having almost all the boiler plate to serve new projects.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/",
-    "directory": "packages/bulky-template"
+    "url": "https://github.com/ishuha/cra-template-bulky.git",
+    "directory": "packages/cra-template-bulky"
   },
-  "license": "MIT",
-  "engines": {
-    "node": ">=14"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "files": [
-    "template",
-    "template.json"
-  ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

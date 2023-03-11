@@ -1,48 +1,22 @@
 import React from 'react'
-import { Route, Router, Routes } from 'react-router-dom'
-import Header from '../components/header/Header'
+import { Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home'
-import Login from '../pages/Login'
+import Login from '../pages/Auth/Login'
+import Register from '../pages/Auth/Register'
+import About from '../pages/About'
 import ProtectedRoutes from './ProtectedRoutes'
-import UnprotectedRoutes from './UnprotectedRoutes'
-
-
-// export default function RouteMap() {
-//   return (
-//     <>
-//   <Routes>
-//     {/* <UnprotectedRoutes/> */}
-//     <Route path='/login' element={<Login/>}/>
-    
-//     {/* <ProtectedRoutes/> */}
-//   </Routes>
-//   <ProtectedRoutes>
-
-//     <Route path='/' element={<Home />} />
-//   </ProtectedRoutes>
-//   </>)
-// }
-
-// export default function RouteMap() {
-//   return (
-//     <>
-//     <UnprotectedRoutes/>
-    
-//     <ProtectedRoutes>
-//       <Route path='/' element={<Home />} />
-//     </ProtectedRoutes>
-//   </>)
-// }
+import CounterPage from '../pages/Counter'
 
 export default function RouteMap() {
   return (
     <Routes>
-      <Route path='/login' element={<Login/>}/>
-    
-      <Route path='/' element={<ProtectedRoutes/> }>
-        <Route path='/' element={<Home/>}/> 
-        <Route exact path='head' element={<Header/>}/>
+      <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
+      <Route element={<ProtectedRoutes />}>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/counter' element={<CounterPage />} />
       </Route>
-    
-  </Routes>)
+    </Routes>
+  )
 }
